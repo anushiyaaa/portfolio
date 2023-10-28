@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>your name - porfolioo</title>
+        <style>
+            body {
+               font-family: Arial, sans-serif;
+               margin: 0;
+               padding: 0;
+               background-color: white
+            }
+            header {
+                background-color: black;
+                color: white;
+                text-align: center;
+                position: relative;
+            }
+            .header-content h1 {
+                font-size: 2.5rem;
+            }
+            .profile-picture {
+                width: 100px;
+                height: 100px;
+                border-radius: 75%;
+                object-fit: cover;
+                position: absolute;
+                top: 75px;
+                left: 75px;
+            }
+            nav {
+                background-color: black;
+                color: white;
+                text-align: center;
+            }
+            nav ul {
+                list-style-type: none;
+                padding: 10px;
+            }
+            nav ul li {
+                display: inline;
+                margin: 0 20px;
+            }
+            nav ul li a {
+                text-decoration: none;
+                color: white;
+            }
+            .section-content {
+                background-color: white;
+                padding: 2rem;
+                margin: 1rem;
+               border-radius: 20px;
+               box-shadow: 0 o 10px rgba(red, green, blue, alpha)(0,0,0,0.1); 
+            }
+            .download-button {
+                background-color: white;
+                color: white;
+                padding: 0.5rem 1rem;
+                text-decoration: none;
+                border-radius: 20px;
+                display: inline-block;
+                margin-top: 10px;
+            }
+            .download-button:hover {
+                background-color: blue;
+            }
+            footer {
+                text-align: center;
+                padding: 1rem 0;
+                background-color: black;
+                color: black;
+            }
+            ul {
+                list-style-type: lower-roman;
+                padding-left: 20px;
+            }
+            </style>
+    </head>
+    <body>
+        <header>
+            <div class="header-content">
+                <img src="anu.jpeg"alt="your profile picture" class="profile-picture">
+                <h1>anushiya</h1>
+                <p>passionate on teaching</p>
+            </div>
+        </header>
+        <nav>
+            <ul>
+                <li><a href="#about">about</a></li>
+                <li><a href="#education">education</a></li>
+                <li><a href="#skills">skills</a></li>
+                <li><a href="#projects">projects</a></li>
+                <li><a href="#resume">resume</a></li>
+            </ul>
+        </nav>
+        <section id="about">
+            <div class="section-content">
+                <h2>About Me</h2>
+                <p>Hello Everyone! this is anushiya and i an a computer science mentor.</p>
+            </div>
+        </section>
+<section id="education">
+    <div class="section-content">
+       <h2>education</h2>
+       <p>Manonmaniyam sundarnar univercity</p>
+       <table border="1">
+        <tr>
+            <th>Degree</th>
+            <th>College</th>
+            <th>Department</th>
+        </tr>
+        <tr>
+            <td>10th</td>
+            <td>rani school</td>
+            <td>NA</td>
+        </tr>
+        <tr>
+            <td>12th</td>
+            <td>rani school</td>
+            <td>computer science</td>
+        </tr>
+        <tr>
+            <td>BCA</td>
+            <td>Ambai ARTs college</td>
+            <td>MSU</td>
+        </tr>
+        </table>
+    </div>
+    </section>
+    <section id="projects">
+        <div class="section-content">
+            <h2>projects</h2>
+            <ul>
+                <li><a href="#">project 1</a></li>
+                <li><a href="#">project 2</a></li>
+            </ul>
+            </div>
+    </section>
+    <section id="resume">
+        <center>
+            <div class="section-content">
+                <h2>Resume</h2>
+                <a href="https://docs.google.com"class="download-button">Download CV</a>
+            </div>
+        </center>
+    </section>
+    <footer>
+        <p>&COPY; 2023 anushiya</p>
+    </footer>
+    </body>
+</html>
+<script>
+    document.querySelectorAll('a[href="#"]').forEach(anchor => {
+        anchor.addEventListener('click',function(e)){e.preventDefult();
+    const targetId=this.getAttribute('href').substring(1);
+const targetElement=document.getElementById(targetId);
+if(targetElement){
+    window.scrollTo({
+        top:targetElement.offsetTop,
+        behavior:'smooth'
+    });
+}
+};
+});
+</script>
